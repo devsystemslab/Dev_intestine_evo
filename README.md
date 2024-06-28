@@ -50,5 +50,24 @@ this tree is a adaptation of a tree avialable here: https://github.com/joelarmst
 speciesNode.list
 contains information for calculating ancestors program on which species are on which nodes in relation to the human branch ad which species share nodes. This file must bein descending distance to human tarting wit the mostdistant node.
 
-calculateAncestor.csh
+calculateAncestors.csh
 This program takes in the final alignments, the regions of interest and the allSpecies.bed file. It also requires the speciesNode.list file. This outputs dated regions into node specific files in a directory called coverageCalls/ and will list the original coordinates of each region in its file.
+
+species.list
+contains the assembly name of every species included (order isn't important)
+
+dists.comma.txt
+contains the comma separated version of dists.txt
+
+dists.txt
+describes the phylogenetic distance between all pairwise sets of species in the newick. Calculated using PHAST/all_dists: http://compgen.cshl.edu/phast/
+
+axtToNetBed.csh
+this function processes axt files output by lastz into final BED files for input into calculateAncestors.csh. It requires an installation of kentutils and that the pairwise alignment outputs and other required files are available in the correct locations (see paths in script for locations required). This also requires alignment matrices.
+
+hoxD55.mat
+default.mat
+human_chimp_v2.mat
+these are alignment matrices needed for lastz and for chaining and neeting in netToAxtBed.csh
+
+
