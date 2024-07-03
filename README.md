@@ -1,5 +1,11 @@
 # Dev_intestine_evo
-Scripts for the manuscript titled as Recent evolution of the developing human small intestinal epithelium
+Scripts and resources for the manuscript titled as Recent evolution of the developing human small intestinal epithelium
+
+makeByChrom.csh
+this will take each genome and split it into bins of similar size so computational resources can be used efficiently. This will filter out smaller contigs and then group the fastas into bins.
+
+getGenomes.csh
+this function will take the species list and grab the genomes for the analysis from UCSC as well as their chrom.sizes and 2bit files which will be necessary in later steps.
 
 datedHumanGenome/
 contains a file for each node of the tree which has human regions that are associated with that node. 
