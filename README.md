@@ -16,4 +16,4 @@ Plotting: plotting scripts, including script to generate willow plot for visuali
 scSTARRseq: scripts to construct customized reference for read alignments, preprocessing and downstream analysis.
 
 ## Development and maintaince
-In this manuscript, Stefano Secchia established the workflow for scSTARRseq data analysis, [Christiana Fauci](https://github.com/cfauci) established the workflow for deepest evolutionary ancestry assignment; [Jasper Janssens](https://github.com/jjans5) established the workflow of deep learning. [Qianhui Yu](https://github.com/qianhuiyu) established the other workflows and are responsible for the maintenance. 
+In this manuscript, [Stefano Secchia](https://github.com/ssecchia) established the workflow for scSTARRseq data analysis, [Christiana Fauci](https://github.com/cfauci) established the workflow for deepest evolutionary ancestry assignment; [Jasper Janssens](https://github.com/jjans5) established the workflow of deep learning. [Qianhui Yu](https://github.com/qianhuiyu) established the other workflows and are responsible for the maintenance. 
