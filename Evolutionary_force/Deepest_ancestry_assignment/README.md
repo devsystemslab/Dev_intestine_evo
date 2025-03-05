@@ -1,5 +1,5 @@
-# Dev_intestine_evo
-Scripts and resources for the manuscript titled as Recent evolution of the developing human small intestinal epithelium
+# Deepest_ancestry_assignment
+Scripts and resources for deepest evolutionary ancestry assignment for regulatory elements
 
 makeByChrom.csh
 this will take each genome and split it into bins of similar size so computational resources can be used efficiently. This will filter out smaller contigs and then group the fastas into bins.
