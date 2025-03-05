@@ -1,0 +1,10 @@
+#!/bin/bash
+#BSUB -J count_030   	# Job name
+#BSUB -n 8             # number of tasks
+#BSUB -q long          # Select queue
+#BSUB -W 20:00         # Wall-clock time (hrs:mins)
+#BSUB -R "rusage[mem=80GB/host]"
+#BSUB -o /home/secchias/logs/count.030.out # Output file
+#BSUB -e /home/secchias/logs/count.030.err # Error file
+
+cellranger count --id=SS030 --create-bam false --transcriptome=/projects/site/pred/ihb-intestine-evo/stefano_area/projects/fetal_intestine_evolution/STARR_seq/Genome/024/Hg38_2024_STARR --fastqs=/home/secchias/scratch/STARRseq/030/fastq

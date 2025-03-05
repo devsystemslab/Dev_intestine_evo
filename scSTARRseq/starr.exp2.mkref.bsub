@@ -1,0 +1,9 @@
+#!/bin/bash
+#BSUB -J starr_mkref
+#BSUB -n 2 
+#BSUB -M 20GB
+#BSUB -q short
+#BSUB -o /home/secchias/logs/mkref.out
+#BSUB -e /home/secchia/logs/mkref.err
+
+cellranger mkref --genome=Hg38_2024_STARR --fasta /projects/site/pred/ihb-intestine-evo/stefano_area/projects/fetal_intestine_evolution/STARR_seq/Genome/024/genome_STARR.fa --genes /projects/site/pred/ihb-intestine-evo/stefano_area/projects/fetal_intestine_evolution/STARR_seq/Genome/024/genes_STARR.gtf
