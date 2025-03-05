@@ -1,0 +1,15 @@
+{
+    "cmd": "contribs_bw",
+    "model_h5": "celltype_models_human/modelv1_Goblet_cell/fold_1/output/models/chrombpnet_nobias.h5",
+    "regions": "regions_of_interest/LCT_regions_peaks.bed",
+    "genome": "encode_data/hg38.fa",
+    "chrom_sizes": "encode_data/hg38.chrom.sizes",
+    "output_prefix": "region_scores/Goblet_cell/LCT_regions/fold_1",
+    "profile_or_counts": [
+        "counts",
+        "profile"
+    ],
+    "output_prefix_stats": null,
+    "tqdm": 1,
+    "debug_chr": null
+}

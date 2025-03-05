@@ -1,0 +1,155 @@
+WARNING:tensorflow:OMP_NUM_THREADS is no longer used by the default Keras config. To configure the number of threads, use tf.config.threading APIs.
+got the model
+Model: "model_1"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ sequence (InputLayer)          [(None, 2114, 4)]    0           []                               
+                                                                                                  
+ wo_bias_bpnet_1st_conv (Conv1D  (None, 2094, 512)   43520       ['sequence[0][0]']               
+ )                                                                                                
+                                                                                                  
+ wo_bias_bpnet_1conv (Conv1D)   (None, 2090, 512)    786944      ['wo_bias_bpnet_1st_conv[0][0]'] 
+                                                                                                  
+ wo_bias_bpnet_1crop (Cropping1  (None, 2090, 512)   0           ['wo_bias_bpnet_1st_conv[0][0]'] 
+ D)                                                                                               
+                                                                                                  
+ add (Add)                      (None, 2090, 512)    0           ['wo_bias_bpnet_1conv[0][0]',    
+                                                                  'wo_bias_bpnet_1crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_2conv (Conv1D)   (None, 2082, 512)    786944      ['add[0][0]']                    
+                                                                                                  
+ wo_bias_bpnet_2crop (Cropping1  (None, 2082, 512)   0           ['add[0][0]']                    
+ D)                                                                                               
+                                                                                                  
+ add_1 (Add)                    (None, 2082, 512)    0           ['wo_bias_bpnet_2conv[0][0]',    
+                                                                  'wo_bias_bpnet_2crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_3conv (Conv1D)   (None, 2066, 512)    786944      ['add_1[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_3crop (Cropping1  (None, 2066, 512)   0           ['add_1[0][0]']                  
+ D)                                                                                               
+                                                                                                  
+ add_2 (Add)                    (None, 2066, 512)    0           ['wo_bias_bpnet_3conv[0][0]',    
+                                                                  'wo_bias_bpnet_3crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_4conv (Conv1D)   (None, 2034, 512)    786944      ['add_2[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_4crop (Cropping1  (None, 2034, 512)   0           ['add_2[0][0]']                  
+ D)                                                                                               
+                                                                                                  
+ add_3 (Add)                    (None, 2034, 512)    0           ['wo_bias_bpnet_4conv[0][0]',    
+                                                                  'wo_bias_bpnet_4crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_5conv (Conv1D)   (None, 1970, 512)    786944      ['add_3[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_5crop (Cropping1  (None, 1970, 512)   0           ['add_3[0][0]']                  
+ D)                                                                                               
+                                                                                                  
+ add_4 (Add)                    (None, 1970, 512)    0           ['wo_bias_bpnet_5conv[0][0]',    
+                                                                  'wo_bias_bpnet_5crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_6conv (Conv1D)   (None, 1842, 512)    786944      ['add_4[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_6crop (Cropping1  (None, 1842, 512)   0           ['add_4[0][0]']                  
+ D)                                                                                               
+                                                                                                  
+ add_5 (Add)                    (None, 1842, 512)    0           ['wo_bias_bpnet_6conv[0][0]',    
+                                                                  'wo_bias_bpnet_6crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_7conv (Conv1D)   (None, 1586, 512)    786944      ['add_5[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_7crop (Cropping1  (None, 1586, 512)   0           ['add_5[0][0]']                  
+ D)                                                                                               
+                                                                                                  
+ add_6 (Add)                    (None, 1586, 512)    0           ['wo_bias_bpnet_7conv[0][0]',    
+                                                                  'wo_bias_bpnet_7crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_8conv (Conv1D)   (None, 1074, 512)    786944      ['add_6[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_8crop (Cropping1  (None, 1074, 512)   0           ['add_6[0][0]']                  
+ D)                                                                                               
+                                                                                                  
+ add_7 (Add)                    (None, 1074, 512)    0           ['wo_bias_bpnet_8conv[0][0]',    
+                                                                  'wo_bias_bpnet_8crop[0][0]']    
+                                                                                                  
+ wo_bias_bpnet_prof_out_precrop  (None, 1000, 1)     38401       ['add_7[0][0]']                  
+  (Conv1D)                                                                                        
+                                                                                                  
+ wo_bias_bpnet_logitt_before_fl  (None, 1000, 1)     0           ['wo_bias_bpnet_prof_out_precrop[
+ atten (Cropping1D)                                              0][0]']                          
+                                                                                                  
+ gap (GlobalAveragePooling1D)   (None, 512)          0           ['add_7[0][0]']                  
+                                                                                                  
+ wo_bias_bpnet_logits_profile_p  (None, 1000)        0           ['wo_bias_bpnet_logitt_before_fla
+ redictions (Flatten)                                            tten[0][0]']                     
+                                                                                                  
+ wo_bias_bpnet_logcount_predict  (None, 1)           513         ['gap[0][0]']                    
+ ions (Dense)                                                                                     
+                                                                                                  
+==================================================================================================
+Total params: 6,377,986
+Trainable params: 6,377,986
+Non-trainable params: 0
+__________________________________________________________________________________________________
+WARNING:tensorflow:From /cluster/home/jjanssens/.local/lib/python3.10/site-packages/shap/explainers/deep/deep_tf.py:140: The name tf.keras.backend.get_session is deprecated. Please use tf.compat.v1.keras.backend.get_session instead.
+
+inferred model inputlen:  2114
+Seqs dimension : (2, 2114, 4)
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Generating 'counts' shap scores
+Done 0 examples of 2
+Saving 'counts' scores
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  AddV2 used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  StopGradient used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  SpaceToBatchND used in model but handling of op is not specified by shap; will use original  gradients
+Warning:  BatchToSpaceND used in model but handling of op is not specified by shap; will use original  gradients
+Generating 'profile' shap scores
+Done 0 examples of 2
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 290.89it/s]
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 289.13it/s]
+Saving 'profile' scores
