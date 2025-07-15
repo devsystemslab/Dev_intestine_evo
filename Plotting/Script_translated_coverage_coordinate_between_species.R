@@ -101,26 +101,6 @@ write.table(scale_factor, file="List_tIO_epi_scATAC_seq_scale_factor.tsv",row.na
 #  mv sorted.bedGraph  $output
 #done
 
-# normalize bedGraph by number of single-cells
-#while IFS=$'\t' read -r ID factor
-#do
-#       input=${ID}_tIO_scATAC.bedGraph
-#       output=${ID}_normed.bedGraph
-#       awk 'OFS="\t"{print $1,$2,$3,($4/'$factor')*100}' $input > $output 
-#       #echo 'OFS="\t"{print $1,$2,$3,($4/'$factor')*100}'
-#done < List_tIO_epi_scATAC_seq_scale_factor.tsv
-
-# convert bedGraphToBigWig
-#for file in `ls *normed.bedGraph`
-#do
-#ID=`echo $file | cut -d'.' -f1`
-#output1=${ID}_noOverlaps.bedGraph
-#output2=${ID}.bw
-##echo $output
-#bedops --partition $file | bedmap --echo --echo-map-id-uniq --delim '\t' - $file | awk '{ n = split($4, a, ";"); max = a[1]; for(i = 2; i <= n; i++) { if (a[i] > max) { max = a[i];} } print $1"\t"$2"\t"$3"\t"max; }' - > $output1
-#
-#/projects/site/pred/ihb-intestine-evo/Tools/bedGraphToBigWig $output1 /projects/site/pred/ihb-intestine-evo/genomes/hg38_standard/hg38.chrom.sizes $output2
-#done
 ## normalize bedGraph by number of single-cells
 ##while IFS=$'\t' read -r ID factor
 ##do

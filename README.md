@@ -15,5 +15,11 @@ Plotting: plotting scripts, including script to generate willow plot for visuali
 
 scSTARRseq: scripts to construct customized reference for read alignments, preprocessing and downstream analysis.
 
+## Processed data for figure reproduction
+Most processed data are accessible via Mendeley Data https://doi.org/10.17632/W4MKDMWVN6 
+scATAC-seq fragment files are accessible via Zenodo https://doi.org/10.5281/zenodo.15923365
+Seurat objects of scATAC-seq data of all PSC derived HIOs/CIOs are accessible via ArrayExpress with accession number E-MTAB-15112
+
+
 ## Development and maintaince
 In this manuscript, [Stefano Secchia](https://github.com/ssecchia) established the workflow for scSTARRseq data analysis, [Christiana Fauci](https://github.com/cfauci) established the workflow for deepest evolutionary ancestry assignment; [Jasper Janssens](https://github.com/jjans5) established the workflow of deep learning. [Qianhui Yu](https://github.com/qianhuiyu) established the other workflows and are responsible for the maintenance. 
